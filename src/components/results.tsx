@@ -46,7 +46,7 @@ export const Results = (): JSX.Element => {
                 <dd className='mt-1 text-sm text-gray-900 sm:col-span-2 sm:mt-0'>
                   {Array.isArray(value) ? (
                     value.map(
-                      (item): JSX.Element => (
+                      (item: { country_id: string; probability: string }): JSX.Element => (
                         <div key={item.country_id}>
                           {/*//@ts-ignore */}
                           {`${countries[item.country_id]} - ${item.probability}%`} <br />
